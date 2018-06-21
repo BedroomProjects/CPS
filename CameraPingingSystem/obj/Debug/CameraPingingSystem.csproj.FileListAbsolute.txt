@@ -1,0 +1,28 @@
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\bin\Debug\CameraPingingSystem.exe.config
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\bin\Debug\CameraPingingSystem.exe
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\bin\Debug\CameraPingingSystem.pdb
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.csprojResolveAssemblyReference.cache
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\obj\Debug\MainWindow.baml
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\obj\Debug\MainWindow.g.cs
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\obj\Debug\App.g.cs
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem_MarkupCompile.cache
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.g.resources
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.Properties.Resources.resources
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.csproj.GenerateResource.Cache
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.exe
+c:\users\yusuf\documents\visual studio 2013\Projects\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.pdb
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\bin\Debug\CameraPingingSystem.exe.config
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.exe
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.pdb
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\bin\Debug\CameraPingingSystem.exe
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\bin\Debug\CameraPingingSystem.pdb
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.csprojResolveAssemblyReference.cache
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\MainWindow.baml
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\Views\LoginFormWindow.baml
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\MainWindow.g.cs
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\Views\LoginFormWindow.g.cs
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\App.g.cs
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem_MarkupCompile.cache
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.g.resources
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.Properties.Resources.resources
+F:\Yusuf\CameraPingingSystem\CameraPingingSystem\obj\Debug\CameraPingingSystem.csproj.GenerateResource.Cache
