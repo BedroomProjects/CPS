@@ -24,7 +24,7 @@ namespace CameraPingingSystem
         public MainWindow()
         {
             InitializeComponent();
-            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen; // centers the main window screen.
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
