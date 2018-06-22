@@ -1,0 +1,3 @@
+F:\Github Projects\CPS\CameraPingingSystem\bin\Debug\CameraPingingSystem.exe.config
+F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\CameraPingingSystem.exe
+F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\CameraPingingSystem.pdb

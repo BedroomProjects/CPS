@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dcea8399ea29496db3d0556a35cd3add" Name="Diagram1">
+        <EntityTypeShape EntityType="msdbModel.backupfile" Width="1.5" PointX="14.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.backupfilegroup" Width="1.5" PointX="14.25" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.backupmediafamily" Width="1.5" PointX="12" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.backupmediaset" Width="1.5" PointX="9.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.backupset" Width="1.5" PointX="12" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_monitor_alert" Width="1.5" PointX="9.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_monitor_primary" Width="1.5" PointX="8.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_monitor_secondary" Width="1.5" PointX="18.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_primaries" Width="1.5" PointX="5.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_primary_databases" Width="1.5" PointX="26.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_primary_secondaries" Width="1.5" PointX="8.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_secondary" Width="1.5" PointX="26.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_secondary_databases" Width="1.5" PointX="26.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.MSdbm" Width="1.5" PointX="9.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.MSdbms_datatype" Width="1.5" PointX="12" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.MSdbms_datatype_mapping" Width="1.5" PointX="14.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.MSdbms_map" Width="1.5" PointX="16.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.restorehistory" Width="1.5" PointX="14.25" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syscachedcredential" Width="1.5" PointX="0.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syscollector_blobs_internal" Width="1.5" PointX="5.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syscollector_collection_items_internal" Width="1.5" PointX="21.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syscollector_collection_sets_internal" Width="1.5" PointX="19" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syscollector_collector_types_internal" Width="1.5" PointX="19" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syscollector_config_store_internal" Width="1.5" PointX="11.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syscollector_execution_log_internal" Width="1.5" PointX="21.25" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syscollector_execution_stats_internal" Width="1.5" PointX="23.5" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysdbmaintplan" Width="1.5" PointX="21.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysdtscategory" Width="1.5" PointX="25.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysdtspackagelog" Width="1.5" PointX="11.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysdtspackage" Width="1.5" PointX="28" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysdtssteplog" Width="1.5" PointX="14" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysdtstasklog" Width="1.5" PointX="16.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysjobstepslog" Width="1.5" PointX="26.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_account" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_attachments_transfer" Width="1.5" PointX="28.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_configuration" Width="1.5" PointX="0.75" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_log" Width="1.5" PointX="2.75" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_mailitems" Width="1.5" PointX="21.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_principalprofile" Width="1.5" PointX="28" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_profile" Width="1.5" PointX="25.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_profileaccount" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_query_transfer" Width="1.5" PointX="18.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_send_retries" Width="1.5" PointX="24" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_server" Width="1.5" PointX="6" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_servertype" Width="1.5" PointX="3.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmaintplan_log" Width="1.5" PointX="21.25" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmaintplan_subplans" Width="1.5" PointX="19" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmanagement_shared_registered_servers_internal" Width="1.5" PointX="26" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmanagement_shared_server_groups_internal" Width="1.5" PointX="23.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_conditions_internal" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_configuration_internal" Width="1.5" PointX="13.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_management_facets" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_object_sets_internal" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_policies_internal" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_policy_categories_internal" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_policy_category_subscriptions_internal" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_policy_execution_history_details_internal" Width="1.5" PointX="9.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_policy_execution_history_internal" Width="1.5" PointX="7.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_system_health_state_internal" Width="1.5" PointX="7.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_target_set_levels_internal" Width="1.5" PointX="7.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_target_sets_internal" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysschedule" Width="1.5" PointX="16.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syssession" Width="1.5" PointX="0.75" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysssislog" Width="1.5" PointX="28.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysssispackagefolder" Width="1.5" PointX="28.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysssispackage" Width="1.5" PointX="16.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_monitor_error_detail" Width="1.5" PointX="28.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_monitor_history_detail" Width="1.5" PointX="28.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.log_shipping_secondaries" Width="1.5" PointX="8" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.logmarkhistory" Width="1.5" PointX="28.75" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.restorefile" Width="1.5" PointX="16.5" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.restorefilegroup" Width="1.5" PointX="16.5" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sqlagent_info" Width="1.5" PointX="30.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.suspect_pages" Width="1.5" PointX="30.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysalert" Width="1.5" PointX="4.75" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syscategory" Width="1.5" PointX="30.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syscollector_tsql_query_collector" Width="1.5" PointX="23.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysdbmaintplan_databases" Width="1.5" PointX="24" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysdbmaintplan_history" Width="1.5" PointX="6.75" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysdbmaintplan_jobs" Width="1.5" PointX="24" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysdownloadlist" Width="1.5" PointX="8.75" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysjobactivity" Width="1.5" PointX="3" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysjobhistory" Width="1.5" PointX="30.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysjob" Width="1.5" PointX="30.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysjobschedule" Width="1.5" PointX="19" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysjobserver" Width="1.5" PointX="30.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysjobstep" Width="1.5" PointX="30.75" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmail_attachments" Width="1.5" PointX="24" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysmaintplan_logdetail" Width="1.5" PointX="23.5" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysnotification" Width="1.5" PointX="25.75" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysoperator" Width="1.5" PointX="10.75" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysoriginatingserver" Width="1.5" PointX="30.75" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syspolicy_facet_events" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysproxy" Width="1.5" PointX="32.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysproxylogin" Width="1.5" PointX="0.75" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.sysproxysubsystem" Width="1.5" PointX="32.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.syssubsystem" Width="1.5" PointX="32.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.systargetservergroupmember" Width="1.5" PointX="32.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.systargetservergroup" Width="1.5" PointX="12.75" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.systargetserver" Width="1.5" PointX="32.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="msdbModel.systaskid" Width="1.5" PointX="14.75" PointY="32.875" IsExpanded="true" />
+        <AssociationConnector Association="msdbModel.FK__backupfil__backu__19AACF41" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__backupfil__backu__14E61A24" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__backupmed__media__0A688BB1" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__backupset__media__10216507" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__restorehi__backu__1E6F845E" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__log_shipp__prima__1A34DF26" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.fk_MSdbms_datatype_dbms_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.fk_MSdbms_map_dest_dbms_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.fk_MSdbms_map_src_dbms_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.fk_MSdbms_datatype_mapping_dest_datatype_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.fk_MSdbms_map_src_datatype_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.fk_MSdbms_datatype_mapping_map_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.fk_MSdbms_map_default_datatype_mapping_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__restorefi__resto__2057CCD0" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__restorefi__resto__22401542" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syscollector_collection_items_internal_syscollector_collection_sets_internal" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syscollector_collection_items_internal_syscollector_collector_types_internal" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syscollector_tsql_query_collector_syscollector_collection_items_internal" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syscollector_execution_log_collection_set_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syscollector_collector_types_internal_collection_sysssispackages" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syscollector_collector_types_internal_upload_sysssispackages" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syscollector_execution_stats_log_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysdbmain__plan___00750D23" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysdbmain__plan___7BB05806" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysdtspac__categ__2EA5EC27" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysdtsste__linea__4589517F" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysdtstas__stepe__4A4E069C" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysmail_p__accou__68D28DBC" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysmail_s__accou__73501C2F" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_mailitems_mailitem_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_sysmail_mailitems_mailitem_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysmail_p__profi__5E54FF49" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysmail_s__serve__74444068" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_sysmaintplan_log_detail_task_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_sysmaintplan_log_subplan_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_subplan_schedule_id" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysmanage__serve__31D75E8D" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syspolicy_conditions_internal_facet" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syspolicy_levels_conditions" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syspolicy_policies_syspolicy_conditions" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syspolicy_policies_syspolicy_root_conditions" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__syspolicy__manag__43F60EC8" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syspolicy_object_sets_syspolicy_management_facets" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syspolicy_policies_syspolicy_object_sets" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syspolicy_target_sets_syspolicy_object_sets" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__syspolicy__polic__24485945" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__syspolicy__polic__2A01329B" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syspolicy_policies_syspolicy_policy_categories" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syspolicy_policy_category_subscriptions_syspolicy_policy_categories" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__syspolicy__histo__338A9CD5" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK_syspolicy_levels_target_sets" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysjobsch__sched__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="msdbModel.FK__sysjobact__sessi__1ED998B2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
