@@ -53,6 +53,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Services\IPinger.cs" />
     <Compile Include="Views\LoginFormWindow.xaml.cs">
       <DependentUpon>LoginFormWindow.xaml</DependentUpon>
     </Compile>
