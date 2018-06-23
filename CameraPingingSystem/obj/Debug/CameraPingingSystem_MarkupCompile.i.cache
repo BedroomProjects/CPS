@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Yusuf\Desktop\Yusuf\CPS\CameraPingingSystem\obj\Debug\
+\\10.0.0.5\Shared\Nozom\Yusuf\CPS\CameraPingingSystem\obj\Debug\
 CameraPingingSystem
 none
 false
 DEBUG;TRACE
-C:\Users\Yusuf\Desktop\Yusuf\CPS\CameraPingingSystem\App.xaml
-2934422825
+\\10.0.0.5\Shared\Nozom\Yusuf\CPS\CameraPingingSystem\App.xaml
+3754365235
 
-21-697646966
-17-1091425880
-MainWindow.xaml;Views\LoginFormWindow.xaml;
+22-1878481577
+171832349229
+MainWindow.xaml;Views\LocalAdminEntryPage.xaml;Views\LoginFormWindow.xaml;
 
 False
 

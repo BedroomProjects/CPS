@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Yusuf\Desktop\Yusuf\CPS\CameraPingingSystem\Models\Model1.edmx'. 
+﻿// T4 code generation is enabled for model '\\10.0.0.5\Shared\Nozom\Yusuf\CPS\CameraPingingSystem\Models\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

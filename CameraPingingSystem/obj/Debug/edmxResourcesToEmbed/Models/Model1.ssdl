@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CPSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="booth">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="camera">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IP_ADDRESS" Type="varchar" MaxLength="240" Nullable="false" />
+    <Property Name="ROAD" Type="int" />
+    <Property Name="SECTOR" Type="int" />
+    <Property Name="GATE" Type="int" />
+    <Property Name="BOOTH" Type="int" />
+    <Property Name="LANE" Type="int" />
+  </EntityType>
+  <EntityType Name="gate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="lane">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="road">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="sector">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+    <Property Name="PASS" Type="varchar" MaxLength="100" />
+    <Property Name="ADMIN_PRIVILEGE" Type="int" />
+    <Property Name="ROAD" Type="int" />
+  </EntityType>
+  <Association Name="FK_camera_booth">
+    <End Role="booth" Type="Self.booth" Multiplicity="0..1" />
+    <End Role="camera" Type="Self.camera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="booth">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="camera">
+        <PropertyRef Name="BOOTH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_camera_gate">
+    <End Role="gate" Type="Self.gate" Multiplicity="0..1" />
+    <End Role="camera" Type="Self.camera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gate">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="camera">
+        <PropertyRef Name="GATE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_camera_lane">
+    <End Role="lane" Type="Self.lane" Multiplicity="0..1" />
+    <End Role="camera" Type="Self.camera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lane">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="camera">
+        <PropertyRef Name="LANE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_camera_road">
+    <End Role="road" Type="Self.road" Multiplicity="0..1" />
+    <End Role="camera" Type="Self.camera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="road">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="camera">
+        <PropertyRef Name="ROAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_camera_sector">
+    <End Role="sector" Type="Self.sector" Multiplicity="0..1" />
+    <End Role="camera" Type="Self.camera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sector">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="camera">
+        <PropertyRef Name="SECTOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_road">
+    <End Role="road" Type="Self.road" Multiplicity="0..1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="road">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="ROAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CPSModelStoreContainer">
+    <EntitySet Name="booth" EntityType="Self.booth" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="camera" EntityType="Self.camera" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gate" EntityType="Self.gate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lane" EntityType="Self.lane" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="road" EntityType="Self.road" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sector" EntityType="Self.sector" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_camera_booth" Association="Self.FK_camera_booth">
+      <End Role="booth" EntitySet="booth" />
+      <End Role="camera" EntitySet="camera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_camera_gate" Association="Self.FK_camera_gate">
+      <End Role="gate" EntitySet="gate" />
+      <End Role="camera" EntitySet="camera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_camera_lane" Association="Self.FK_camera_lane">
+      <End Role="lane" EntitySet="lane" />
+      <End Role="camera" EntitySet="camera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_camera_road" Association="Self.FK_camera_road">
+      <End Role="road" EntitySet="road" />
+      <End Role="camera" EntitySet="camera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_camera_sector" Association="Self.FK_camera_sector">
+      <End Role="sector" EntitySet="sector" />
+      <End Role="camera" EntitySet="camera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_road" Association="Self.FK_users_road">
+      <End Role="road" EntitySet="road" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

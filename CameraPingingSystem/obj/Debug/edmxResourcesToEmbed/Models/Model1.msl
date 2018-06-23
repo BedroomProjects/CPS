@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CPSModelStoreContainer" CdmEntityContainer="CPSEntities">
+    <EntitySetMapping Name="booths">
+      <EntityTypeMapping TypeName="CPSModel.booth">
+        <MappingFragment StoreEntitySet="booth">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cameras">
+      <EntityTypeMapping TypeName="CPSModel.camera">
+        <MappingFragment StoreEntitySet="camera">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IP_ADDRESS" ColumnName="IP_ADDRESS" />
+          <ScalarProperty Name="ROAD" ColumnName="ROAD" />
+          <ScalarProperty Name="SECTOR" ColumnName="SECTOR" />
+          <ScalarProperty Name="GATE" ColumnName="GATE" />
+          <ScalarProperty Name="BOOTH" ColumnName="BOOTH" />
+          <ScalarProperty Name="LANE" ColumnName="LANE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gates">
+      <EntityTypeMapping TypeName="CPSModel.gate">
+        <MappingFragment StoreEntitySet="gate">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lanes">
+      <EntityTypeMapping TypeName="CPSModel.lane">
+        <MappingFragment StoreEntitySet="lane">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roads">
+      <EntityTypeMapping TypeName="CPSModel.road">
+        <MappingFragment StoreEntitySet="road">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sectors">
+      <EntityTypeMapping TypeName="CPSModel.sector">
+        <MappingFragment StoreEntitySet="sector">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="CPSModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASS" ColumnName="PASS" />
+          <ScalarProperty Name="ADMIN_PRIVILEGE" ColumnName="ADMIN_PRIVILEGE" />
+          <ScalarProperty Name="ROAD" ColumnName="ROAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

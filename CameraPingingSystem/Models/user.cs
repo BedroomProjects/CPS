@@ -17,7 +17,7 @@ namespace CameraPingingSystem.Models
         public int ID { get; set; }
         public string USERNAME { get; set; }
         public string PASS { get; set; }
-        public Nullable<bool> ADMIN_PRIVILEGE { get; set; }
+        public Nullable<int> ADMIN_PRIVILEGE { get; set; }
         public Nullable<int> ROAD { get; set; }
     
         public virtual road road1 { get; set; }

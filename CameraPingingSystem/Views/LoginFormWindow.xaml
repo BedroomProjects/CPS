@@ -7,7 +7,7 @@
         <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Height="40" Margin="39,222,0,0"  VerticalAlignment="Top" Width="221"/>
         <Label Content="اسم المستخدم" HorizontalAlignment="Left" Margin="282,153,0,0" VerticalAlignment="Top" Height="46" Width="131" FontSize="20"/>
         <Label Content="كلمة السر" HorizontalAlignment="Left" Margin="301,218,0,0" VerticalAlignment="Top" Height="44" Width="92" FontSize="20"/>
-        <Image HorizontalAlignment="Left" Height="125" Margin="155,0,0,0" VerticalAlignment="Top" Width="127" Source="/CameraPingingSystem;component/Resources/logo.png"/>
+        <Image HorizontalAlignment="Left" Height="125" Margin="155,10,0,0" VerticalAlignment="Top" Width="127" Source="/Resources/logo.png"/>
         <Button Content="مسح" HorizontalAlignment="Left" Margin="155,297,0,0" VerticalAlignment="Top" Width="127" Height="52" Click="Button_Click" FontSize="20"/>
         <Button Content="دخول" HorizontalAlignment="Left" Margin="301,297,0,0" VerticalAlignment="Top" Width="112" Height="52" FontSize="20" Click="Button_Click_2"/>
         <Button Content="غلق" HorizontalAlignment="Left" Margin="26,297,0,0" VerticalAlignment="Top" Width="112" Height="52" Click="Button_Click_1" FontSize="20"/>
