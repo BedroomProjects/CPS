@@ -30,6 +30,7 @@ namespace CameraPingingSystem.Services
             Console.ReadLine();
         }
 
+
         static Task<PingReply> PingAsync(string address)
         {
             var tcs = new TaskCompletionSource<PingReply>();
@@ -40,6 +41,16 @@ namespace CameraPingingSystem.Services
             };
             ping.SendAsync(address, new object());
             return tcs.Task;
+        }
+
+
+        static async Task<List<PingReply>> PingAsync()
+        {
+            Ping pingSender = new Ping();
+            var tasks = theListOfIPs.Select(ip => pingSender.SendPingAsync(ip, 2000));
+            var results = await Task.WhenAll(tasks);
+
+            return results.ToList();
         }
     }
 }
