@@ -13,3 +13,6 @@ F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\CameraPingingSystem_MarkupC
 F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\CameraPingingSystem.g.resources
 F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\CameraPingingSystem.Properties.Resources.resources
 F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\CPS.csproj.GenerateResource.Cache
+C:\Users\Yusuf\Desktop\Yusuf\CPS\CameraPingingSystem\bin\Debug\CameraPingingSystem.exe.config
+C:\Users\Yusuf\Desktop\Yusuf\CPS\CameraPingingSystem\obj\Debug\CameraPingingSystem.exe
+C:\Users\Yusuf\Desktop\Yusuf\CPS\CameraPingingSystem\obj\Debug\CameraPingingSystem.pdb
