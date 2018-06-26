@@ -7,7 +7,7 @@
             <ColumnDefinition Width="47*"/>
             <ColumnDefinition Width="26*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="roadName" Content="Label" HorizontalAlignment="Left" Margin="56,23,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="363" FontSize="18"/>
+        <Label x:Name="roadName" Content="Label" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="56,24,58,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="363" FontSize="18" FlowDirection="RightToLeft"/>
         <Button Content="تعريف الكاميرات" HorizontalAlignment="Left" Margin="56,116,0,0" VerticalAlignment="Top" Width="164" Height="73" FontSize="18" Click="Button_Click"/>
         <Button Content="شاشة التحكم" HorizontalAlignment="Left" Margin="255,116,0,0" VerticalAlignment="Top" Width="164" Height="73" Grid.ColumnSpan="2" FontSize="18" Click="Button_Click_1"/>
 

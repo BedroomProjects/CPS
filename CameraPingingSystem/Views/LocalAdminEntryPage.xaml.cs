@@ -39,7 +39,7 @@ namespace CameraPingingSystem.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CameraCRUD _cameraCRUD = new CameraCRUD();
+            CameraCRUD _cameraCRUD = new CameraCRUD(_roadNumber);
             _cameraCRUD.Show();
 
         }

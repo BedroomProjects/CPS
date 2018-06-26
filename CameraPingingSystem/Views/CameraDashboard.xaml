@@ -1,8 +1,12 @@
 ﻿<Window x:Class="CameraPingingSystem.Views.CameraDashboard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="CameraDashboard" Height="300" Width="300">
+        Title="CameraDashboard" Height="300" Width="300" ResizeMode="CanMinimize" Loaded="Window_Loaded">
     <Grid>
-        
+        <Label Content="عدد الكاميرات الغير متاحة" HorizontalAlignment="Left" Margin="154,73,0,0" VerticalAlignment="Top"/>
+        <Label Content="عدد الكاميرات المتاحة" HorizontalAlignment="Left" Margin="167,142,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="CameraDownLabel" Content="0" HorizontalAlignment="Left" Margin="44,73,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="CameraUpLabel" Content="0" HorizontalAlignment="Left" Margin="44,142,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
