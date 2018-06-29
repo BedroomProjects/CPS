@@ -39,9 +39,7 @@ namespace CameraPingingSystem.Views
 
         public CameraDashboardDetailed(int roadNumber)
         {
-
             InitializeComponent();
-
             cpsEntities = new CPSEntities();
             this._roadNumber = (int)roadNumber;
             _ipaddresses = cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => i.IP_ADDRESS).ToArray();
@@ -64,8 +62,6 @@ namespace CameraPingingSystem.Views
         {
             while (true)
             {
-
-
                 var lisfOfTasks = new List<Task>();
                 for (int i = 0; i < _ipaddresses.Length; i++)
                 {
@@ -77,24 +73,12 @@ namespace CameraPingingSystem.Views
                 {
                     this.Dispatcher.Invoke(() =>
                     {
-                        //foreach (var ip in _Found)
-                        //{
-                        //    WorkingCamerasDataGrid.Items.Add(cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => new { i.ID, i.IP_ADDRESS, i.LANE, i.ROAD, i.SECTOR, i.GATE, i.BOOTH}).ToList());
-
-                        //}
                         notWorkingCamerasDataGrid.DataContext = _nFound.ToList();
-
-                        //foreach (var ip in _nFound)
-                        //{
-                        //    notWorkingCamerasDataGrid.Items.Add(cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => new { i.ID, i.IP_ADDRESS, i.LANE, i.ROAD, i.SECTOR, i.GATE, i.BOOTH }).ToList());
-
-                        //}
                         WorkingCamerasDataGrid.DataContext = _Found.ToList();
                         timeLabel.Content = DateTime.Now.ToString("h:mm:ss tt");
                     });
 
                 });
-
                 Thread.Sleep(1000 * secondsPerPing);
                 _nFound.Clear();
                 _Found.Clear();
@@ -116,7 +100,6 @@ namespace CameraPingingSystem.Views
                 {
                     var _camera = cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => new camera { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.ROAD, SECTOR = i.SECTOR, GATE = i.GATE, BOOTH = i.BOOTH, LANE = i.LANE });
                     _Found.Add(_camera);
-                    Console.WriteLine(ip);
                 }
             }
             else
@@ -124,7 +107,6 @@ namespace CameraPingingSystem.Views
                 lock (lockObj)
                 {
                     var _camera = cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => new camera { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.ROAD, SECTOR = i.SECTOR, GATE = i.GATE, BOOTH = i.BOOTH, LANE = i.LANE });
-
                     _nFound.Add(_camera);
                 }
 
