@@ -1,4 +1,3 @@
-F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\CPS.csprojResolveAssemblyReference.cache
 F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\MainWindow.baml
 F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\Views\LoginFormWindow.baml
 F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\MainWindow.g.cs
@@ -125,3 +124,6 @@ F:\Github Projects\CPS\CameraPingingSystem\bin\Debug\EntityFramework.dll
 F:\Github Projects\CPS\CameraPingingSystem\bin\Debug\EntityFramework.SqlServer.dll
 F:\Github Projects\CPS\CameraPingingSystem\bin\Debug\EntityFramework.xml
 F:\Github Projects\CPS\CameraPingingSystem\bin\Debug\EntityFramework.SqlServer.xml
+F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\Views\CameraDashboardDetailed.g.cs
+F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\CPS_MarkupCompile.lref
+F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\Views\CameraDashboardDetailed.baml

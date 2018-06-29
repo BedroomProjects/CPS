@@ -46,7 +46,7 @@ namespace CameraPingingSystem.Views
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            CameraDashboard _cameraDashboard = new CameraDashboard();
+            CameraDashboard _cameraDashboard = new CameraDashboard(_roadNumber);
             _cameraDashboard.Show();
         }
     }

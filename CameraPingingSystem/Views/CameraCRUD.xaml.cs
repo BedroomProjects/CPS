@@ -40,7 +40,7 @@ namespace CameraPingingSystem.Views
             this.RoadComboBox.ItemsSource = cpsEntities.roads.Where(i => i.ID == _roadNumber).Select(i => i.NAME).ToList();
             //this.RoadComboBox.IsEnabled = false;
 
-            var _cameras = cpsEntities.cameras.Select(i => new { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.ROAD, SECTOR = i.SECTOR, GATE = i.GATE, BOOTH = i.BOOTH, LANE = i.LANE }).ToList();
+            var _cameras = cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => new { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.ROAD, SECTOR = i.SECTOR, GATE = i.GATE, BOOTH = i.BOOTH, LANE = i.LANE }).ToList();
             dataGridView.ItemsSource = _cameras;
         }
 
@@ -67,7 +67,7 @@ namespace CameraPingingSystem.Views
 
         private void updateGridView()
         {
-            var _cameras = cpsEntities.cameras.Select(i => new { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.ROAD, SECTOR = i.SECTOR, GATE = i.GATE, BOOTH = i.BOOTH, LANE = i.LANE }).ToList();
+            var _cameras = cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => new { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.ROAD, SECTOR = i.SECTOR, GATE = i.GATE, BOOTH = i.BOOTH, LANE = i.LANE }).ToList();
             dataGridView.ItemsSource = _cameras;
         }
 

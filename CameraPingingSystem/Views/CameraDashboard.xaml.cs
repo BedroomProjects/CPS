@@ -33,12 +33,14 @@ namespace CameraPingingSystem.Views
         private volatile int _nFound = 0;
         private volatile int _Found = 0;
         private int timeout = 100;
+        private int _roadNumber;
         List<Task> tasks = new List<Task>();
-        public CameraDashboard()
+        public CameraDashboard(int roadNumber)
         {
             InitializeComponent();
             cpsEntities = new CPSEntities();
-            _ipaddresses = cpsEntities.cameras.Select(i => i.IP_ADDRESS).ToArray();
+            this._roadNumber = (int)roadNumber;
+            _ipaddresses = cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => i.IP_ADDRESS).ToArray();
         }
 
 
@@ -50,34 +52,10 @@ namespace CameraPingingSystem.Views
             t.IsBackground = true;
             t.Start();
 
-            //Thread.Sleep(1000 * secondsPerPing);
-            //t.Abort();
 
-
-
-
-            //_nFound = 0;
-            //_Found = 0;
         }
 
-        //public void RunPinginBackground() {
-        //    foreach (var ipaddress in _ipaddresses)
-        //    {
-        //        Ping p = new Ping();
-        //        PingReply reply = p.Send(ipaddress, 100);
-        //        if (reply.Status == IPStatus.Success)
-        //        {
-        //            _Found++;
-        //        }
-        //        else {
-        //            _nFound++;
-        //        }
 
-        //    }
-
-
-
-        //}
 
         public async void RunPingSweep_Async()
         {
@@ -98,6 +76,7 @@ namespace CameraPingingSystem.Views
      {
          CameraUpLabel.Content = _Found;
          CameraDownLabel.Content = _nFound;
+         timeLabel.Content = DateTime.Now.ToString("h:mm:ss tt");
      });
 
                 });
@@ -137,24 +116,14 @@ namespace CameraPingingSystem.Views
             runContinuously();
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            CameraDashboardDetailed cdd = new CameraDashboardDetailed(_roadNumber);
+            cdd.Show();
+        }
 
 
 
-
-        // private async Task<List<PingReply>> PingAsync(string[] ipaddresses)
-        //{
-        //    Ping pingSender = new Ping();
-
-        //    var tasks = new List<Task>();
-        //    foreach (var ipaddress in ipaddresses)
-        //    {
-        //        tasks.Add(new Ping().SendPingAsync(ipaddress, 2000));
-        //    }
-
-        //    var results = await Task.WhenAll(tasks);
-
-        //    return results.ToList();
-        //}
 
 
 

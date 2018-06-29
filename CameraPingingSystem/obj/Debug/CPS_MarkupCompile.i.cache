@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 F:\Github Projects\CPS\CameraPingingSystem\App.xaml
-5-1370737344
+61485632045
 
-251499238650
+26-821794458
 171599749046
-MainWindow.xaml;Views\CameraCRUD.xaml;Views\CameraDashboard.xaml;Views\LocalAdminEntryPage.xaml;Views\LoginFormWindow.xaml;
+MainWindow.xaml;Views\CameraCRUD.xaml;Views\CameraDashboard.xaml;Views\CameraDashboardDetailed.xaml;Views\LocalAdminEntryPage.xaml;Views\LoginFormWindow.xaml;
 
-False
+True
 
