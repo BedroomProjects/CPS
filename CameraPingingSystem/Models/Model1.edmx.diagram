@@ -4,20 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="94fd5b6ea5014a969ac4eebdb90956f0" Name="Diagram1">
-        <EntityTypeShape EntityType="CPSModel.booth" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CPSModel.camera" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CPSModel.gate" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="CPSModel.lane" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CPSModel.road" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CPSModel.sector" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CPSModel.user" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
-        <AssociationConnector Association="CPSModel.FK_camera_booth" ManuallyRouted="false" />
-        <AssociationConnector Association="CPSModel.FK_camera_gate" ManuallyRouted="false" />
-        <AssociationConnector Association="CPSModel.FK_camera_lane" ManuallyRouted="false" />
-        <AssociationConnector Association="CPSModel.FK_camera_road" ManuallyRouted="false" />
-        <AssociationConnector Association="CPSModel.FK_camera_sector" ManuallyRouted="false" />
-        <AssociationConnector Association="CPSModel.FK_users_road" ManuallyRouted="false" />
+      <Diagram DiagramId="de337c3cf07945db9ee875de6a3d2dd2" Name="Diagram1">
+        <EntityTypeShape EntityType="CameraPingingSystemModel.booth" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CameraPingingSystemModel.camera" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CameraPingingSystemModel.gate" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CameraPingingSystemModel.lane" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CameraPingingSystemModel.road" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CameraPingingSystemModel.sector" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CameraPingingSystemModel.user" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <AssociationConnector Association="CameraPingingSystemModel.FK_camera_booth" ManuallyRouted="false" />
+        <AssociationConnector Association="CameraPingingSystemModel.FK_camera_gate" ManuallyRouted="false" />
+        <AssociationConnector Association="CameraPingingSystemModel.FK_camera_lane" ManuallyRouted="false" />
+        <AssociationConnector Association="CameraPingingSystemModel.FK_camera_road" ManuallyRouted="false" />
+        <AssociationConnector Association="CameraPingingSystemModel.FK_camera_sector" ManuallyRouted="false" />
+        <AssociationConnector Association="CameraPingingSystemModel.sector_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="CameraPingingSystemModel.FK_users_road" ManuallyRouted="false" />
+        <AssociationConnector Association="CameraPingingSystemModel.road_fk" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

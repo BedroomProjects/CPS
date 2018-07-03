@@ -68,7 +68,6 @@
     <Compile Include="Models\camera.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CameraWrapper.cs" />
     <Compile Include="Models\gate.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

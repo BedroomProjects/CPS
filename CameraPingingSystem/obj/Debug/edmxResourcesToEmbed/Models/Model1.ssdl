@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="CPSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="CameraPingingSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="booth">
     <Key>
       <PropertyRef Name="ID" />
@@ -25,6 +25,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NAME" Type="varchar" MaxLength="100" />
+    <Property Name="sector" Type="int" />
   </EntityType>
   <EntityType Name="lane">
     <Key>
@@ -46,6 +47,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NAME" Type="varchar" MaxLength="100" />
+    <Property Name="road" Type="int" />
   </EntityType>
   <EntityType Name="users">
     <Key>
@@ -129,7 +131,31 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="CPSModelStoreContainer">
+  <Association Name="road_fk">
+    <End Role="road" Type="Self.road" Multiplicity="0..1" />
+    <End Role="sector" Type="Self.sector" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="road">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="sector">
+        <PropertyRef Name="road" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sector_fk">
+    <End Role="sector" Type="Self.sector" Multiplicity="0..1" />
+    <End Role="gate" Type="Self.gate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sector">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="gate">
+        <PropertyRef Name="sector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CameraPingingSystemModelStoreContainer">
     <EntitySet Name="booth" EntityType="Self.booth" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="camera" EntityType="Self.camera" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="gate" EntityType="Self.gate" Schema="dbo" store:Type="Tables" />
@@ -160,6 +186,14 @@
     <AssociationSet Name="FK_users_road" Association="Self.FK_users_road">
       <End Role="road" EntitySet="road" />
       <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="road_fk" Association="Self.road_fk">
+      <End Role="road" EntitySet="road" />
+      <End Role="sector" EntitySet="sector" />
+    </AssociationSet>
+    <AssociationSet Name="sector_fk" Association="Self.sector_fk">
+      <End Role="sector" EntitySet="sector" />
+      <End Role="gate" EntitySet="gate" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

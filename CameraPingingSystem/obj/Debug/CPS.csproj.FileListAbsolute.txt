@@ -127,3 +127,31 @@ F:\Github Projects\CPS\CameraPingingSystem\bin\Debug\EntityFramework.SqlServer.x
 F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\Views\CameraDashboardDetailed.g.cs
 F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\CPS_MarkupCompile.lref
 F:\Github Projects\CPS\CameraPingingSystem\obj\Debug\Views\CameraDashboardDetailed.baml
+D:\Yusuf\CPS\CameraPingingSystem\bin\Debug\CPS.exe.config
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\CPS.exe
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\CPS.pdb
+D:\Yusuf\CPS\CameraPingingSystem\bin\Debug\CPS.exe
+D:\Yusuf\CPS\CameraPingingSystem\bin\Debug\CPS.pdb
+D:\Yusuf\CPS\CameraPingingSystem\bin\Debug\EntityFramework.dll
+D:\Yusuf\CPS\CameraPingingSystem\bin\Debug\EntityFramework.SqlServer.dll
+D:\Yusuf\CPS\CameraPingingSystem\bin\Debug\EntityFramework.xml
+D:\Yusuf\CPS\CameraPingingSystem\bin\Debug\EntityFramework.SqlServer.xml
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\CPS.csprojResolveAssemblyReference.cache
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\MainWindow.baml
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\Views\CameraCRUD.baml
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\Views\CameraDashboard.baml
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\Views\LocalAdminEntryPage.baml
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\Views\LoginFormWindow.baml
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\MainWindow.g.cs
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\Views\CameraCRUD.g.cs
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\Views\CameraDashboard.g.cs
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\Views\CameraDashboardDetailed.g.cs
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\Views\LocalAdminEntryPage.g.cs
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\Views\LoginFormWindow.g.cs
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\App.g.cs
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\CPS_MarkupCompile.cache
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\CPS_MarkupCompile.lref
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\Views\CameraDashboardDetailed.baml
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\CPS.g.resources
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\CameraPingingSystem.Properties.Resources.resources
+D:\Yusuf\CPS\CameraPingingSystem\obj\Debug\CPS.csproj.GenerateResource.Cache

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="CPSModelStoreContainer" CdmEntityContainer="CPSEntities">
+  <EntityContainerMapping StorageEntityContainer="CameraPingingSystemModelStoreContainer" CdmEntityContainer="CPSEntities">
     <EntitySetMapping Name="booths">
-      <EntityTypeMapping TypeName="CPSModel.booth">
+      <EntityTypeMapping TypeName="CameraPingingSystemModel.booth">
         <MappingFragment StoreEntitySet="booth">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="NAME" ColumnName="NAME" />
@@ -10,7 +10,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="cameras">
-      <EntityTypeMapping TypeName="CPSModel.camera">
+      <EntityTypeMapping TypeName="CameraPingingSystemModel.camera">
         <MappingFragment StoreEntitySet="camera">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="IP_ADDRESS" ColumnName="IP_ADDRESS" />
@@ -23,15 +23,16 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="gates">
-      <EntityTypeMapping TypeName="CPSModel.gate">
+      <EntityTypeMapping TypeName="CameraPingingSystemModel.gate">
         <MappingFragment StoreEntitySet="gate">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="sector" ColumnName="sector" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="lanes">
-      <EntityTypeMapping TypeName="CPSModel.lane">
+      <EntityTypeMapping TypeName="CameraPingingSystemModel.lane">
         <MappingFragment StoreEntitySet="lane">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="NAME" ColumnName="NAME" />
@@ -39,7 +40,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="roads">
-      <EntityTypeMapping TypeName="CPSModel.road">
+      <EntityTypeMapping TypeName="CameraPingingSystemModel.road">
         <MappingFragment StoreEntitySet="road">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="NAME" ColumnName="NAME" />
@@ -47,15 +48,16 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sectors">
-      <EntityTypeMapping TypeName="CPSModel.sector">
+      <EntityTypeMapping TypeName="CameraPingingSystemModel.sector">
         <MappingFragment StoreEntitySet="sector">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="road" ColumnName="road" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="users">
-      <EntityTypeMapping TypeName="CPSModel.user">
+      <EntityTypeMapping TypeName="CameraPingingSystemModel.user">
         <MappingFragment StoreEntitySet="users">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />

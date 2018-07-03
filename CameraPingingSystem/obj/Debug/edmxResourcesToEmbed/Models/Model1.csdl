@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="CPSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="CameraPingingSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="booth">
     <Key>
       <PropertyRef Name="ID" />
@@ -31,7 +31,9 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sector" Type="Int32" />
     <NavigationProperty Name="cameras" Relationship="Self.FK_camera_gate" FromRole="gate" ToRole="camera" />
+    <NavigationProperty Name="sector1" Relationship="Self.sector_fk" FromRole="gate" ToRole="sector" />
   </EntityType>
   <EntityType Name="lane">
     <Key>
@@ -49,6 +51,7 @@
     <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="cameras" Relationship="Self.FK_camera_road" FromRole="road" ToRole="camera" />
     <NavigationProperty Name="users" Relationship="Self.FK_users_road" FromRole="road" ToRole="users" />
+    <NavigationProperty Name="sectors" Relationship="Self.road_fk" FromRole="road" ToRole="sector" />
   </EntityType>
   <EntityType Name="sector">
     <Key>
@@ -56,7 +59,10 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="road" Type="Int32" />
     <NavigationProperty Name="cameras" Relationship="Self.FK_camera_sector" FromRole="sector" ToRole="camera" />
+    <NavigationProperty Name="gates" Relationship="Self.sector_fk" FromRole="sector" ToRole="gate" />
+    <NavigationProperty Name="road1" Relationship="Self.road_fk" FromRole="sector" ToRole="road" />
   </EntityType>
   <EntityType Name="user">
     <Key>
@@ -129,6 +135,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="sector_fk">
+    <End Role="sector" Type="Self.sector" Multiplicity="0..1" />
+    <End Role="gate" Type="Self.gate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sector">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="gate">
+        <PropertyRef Name="sector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_users_road">
     <End Role="road" Type="Self.road" Multiplicity="0..1" />
     <End Role="users" Type="Self.user" Multiplicity="*" />
@@ -138,6 +156,18 @@
       </Principal>
       <Dependent Role="users">
         <PropertyRef Name="ROAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="road_fk">
+    <End Role="road" Type="Self.road" Multiplicity="0..1" />
+    <End Role="sector" Type="Self.sector" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="road">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="sector">
+        <PropertyRef Name="road" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -169,9 +199,17 @@
       <End Role="sector" EntitySet="sectors" />
       <End Role="camera" EntitySet="cameras" />
     </AssociationSet>
+    <AssociationSet Name="sector_fk" Association="Self.sector_fk">
+      <End Role="sector" EntitySet="sectors" />
+      <End Role="gate" EntitySet="gates" />
+    </AssociationSet>
     <AssociationSet Name="FK_users_road" Association="Self.FK_users_road">
       <End Role="road" EntitySet="roads" />
       <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="road_fk" Association="Self.road_fk">
+      <End Role="road" EntitySet="roads" />
+      <End Role="sector" EntitySet="sectors" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

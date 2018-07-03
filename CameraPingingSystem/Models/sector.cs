@@ -17,11 +17,15 @@ namespace CameraPingingSystem.Models
         public sector()
         {
             this.cameras = new HashSet<camera>();
+            this.gates = new HashSet<gate>();
         }
     
         public int ID { get; set; }
         public string NAME { get; set; }
+        public Nullable<int> road { get; set; }
     
         public virtual ICollection<camera> cameras { get; set; }
+        public virtual ICollection<gate> gates { get; set; }
+        public virtual road road1 { get; set; }
     }
 }

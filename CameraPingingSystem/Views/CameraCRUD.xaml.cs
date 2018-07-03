@@ -35,8 +35,10 @@ namespace CameraPingingSystem.Views
         {
             this.LaneComboBox.ItemsSource = cpsEntities.lanes.Select(i => i.NAME).ToList(); // populate road combobox
             this.BoothComboBox.ItemsSource = cpsEntities.booths.Select(i => i.NAME).ToList(); // populate booth combobox
-            this.GateComboBox.ItemsSource = cpsEntities.gates.Select(i => i.NAME).ToList(); // populate gate combobox
-            this.SectorComboBox.ItemsSource = cpsEntities.sectors.Select(i => i.NAME).ToList(); // populate gate combobox
+            //this.GateComboBox.ItemsSource = cpsEntities.gates.Select(i => i.NAME).ToList(); // populate gate combobox
+            this.GateComboBox.ItemsSource = cpsEntities.gates.SqlQuery("select * from gate where sector in (select id from sector where road = "+ _roadNumber +")").Select(i => i.NAME).ToList();
+            //this.SectorComboBox.ItemsSource = cpsEntities.sectors.Select(i => i.NAME).ToList(); // populate sector combobox
+            this.SectorComboBox.ItemsSource = cpsEntities.sectors.SqlQuery("select * from sector where road =" +_roadNumber).Select(i => i.NAME).ToList();
             this.RoadComboBox.ItemsSource = cpsEntities.roads.Where(i => i.ID == _roadNumber).Select(i => i.NAME).ToList();
             //this.RoadComboBox.IsEnabled = false;
 

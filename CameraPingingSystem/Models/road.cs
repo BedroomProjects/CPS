@@ -18,6 +18,7 @@ namespace CameraPingingSystem.Models
         {
             this.cameras = new HashSet<camera>();
             this.users = new HashSet<user>();
+            this.sectors = new HashSet<sector>();
         }
     
         public int ID { get; set; }
@@ -25,5 +26,6 @@ namespace CameraPingingSystem.Models
     
         public virtual ICollection<camera> cameras { get; set; }
         public virtual ICollection<user> users { get; set; }
+        public virtual ICollection<sector> sectors { get; set; }
     }
 }
