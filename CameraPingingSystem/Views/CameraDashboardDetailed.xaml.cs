@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace CameraPingingSystem.Views
 {
@@ -62,19 +63,19 @@ namespace CameraPingingSystem.Views
         {
             while (true)
             {
-                var lisfOfTasks = new List<Task>();
+                var tasks = new List<Task>();
                 for (int i = 0; i < _ipaddresses.Length; i++)
                 {
                     Ping p = new Ping();
                     var task = PingAndUpdateAsync(p, _ipaddresses[i]);
-                    listOfTasks.Add(task);
+                    tasks.Add(task);
                 }
-                await Task.WhenAll(listOfTasks).ContinueWith(t =>
+                await Task.WhenAll(tasks).ContinueWith(t =>
                 {
                     this.Dispatcher.Invoke(() =>
                     {
-                        notWorkingCamerasDataGrid.DataContext = _nFound.ToList();
-                        WorkingCamerasDataGrid.DataContext = _Found.ToList();
+                        notWorkingCamerasDataGrid.ItemsSource = _nFound.ToList();
+                        WorkingCamerasDataGrid.ItemsSource = _Found.ToList();
                         timeLabel.Content = DateTime.Now.ToString("h:mm:ss tt");
                     });
 
@@ -82,11 +83,10 @@ namespace CameraPingingSystem.Views
                 Thread.Sleep(1000 * secondsPerPing);
                 _nFound.Clear();
                 _Found.Clear();
-                listOfTasks.Clear();
                 this.Dispatcher.Invoke(() =>
                 {
-                    notWorkingCamerasDataGrid.Items.Clear();
-                    WorkingCamerasDataGrid.Items.Clear();
+                    notWorkingCamerasDataGrid.ItemsSource = null;
+                    WorkingCamerasDataGrid.ItemsSource = null;
                 });
             }
         }
@@ -98,7 +98,7 @@ namespace CameraPingingSystem.Views
             {
                 lock (lockObj)
                 {
-                    var _camera = cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => new camera { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.ROAD, SECTOR = i.SECTOR, GATE = i.GATE, BOOTH = i.BOOTH, LANE = i.LANE });
+                    var _camera = cpsEntities.cameras.Include(o => o.sector1).Include(g => g.road1).Include(m => m.lane1).Include(z => z.booth1).Where(i => i.ROAD == _roadNumber && i.IP_ADDRESS == ip).Select(i => new CameraWrapper { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.road1.NAME, SECTOR =  i.sector1.NAME, GATE = i.gate1.NAME, BOOTH = i.booth1.NAME, LANE = i.lane1.NAME  }).First();
                     _Found.Add(_camera);
                 }
             }
@@ -106,7 +106,7 @@ namespace CameraPingingSystem.Views
             {
                 lock (lockObj)
                 {
-                    var _camera = cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => new camera { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.ROAD, SECTOR = i.SECTOR, GATE = i.GATE, BOOTH = i.BOOTH, LANE = i.LANE });
+                    var _camera = cpsEntities.cameras.Include(o => o.sector1).Include(g => g.road1).Include(m => m.lane1).Include(z => z.booth1).Where(i => i.ROAD == _roadNumber && i.IP_ADDRESS == ip).Select(i => new CameraWrapper { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.road1.NAME, SECTOR = i.sector1.NAME, GATE = i.gate1.NAME, BOOTH = i.booth1.NAME, LANE = i.lane1.NAME }).First();
                     _nFound.Add(_camera);
                 }
 

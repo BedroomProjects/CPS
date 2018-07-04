@@ -7,8 +7,8 @@
         <Label Content="عدد الكاميرات المتاحة" HorizontalAlignment="Left" Margin="239,142,0,0" VerticalAlignment="Top"/>
         <Label x:Name="CameraDownLabel" Content="0" HorizontalAlignment="Left" Margin="44,73,0,0" VerticalAlignment="Top"/>
         <Label x:Name="CameraUpLabel" Content="0" HorizontalAlignment="Left" Margin="44,142,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label" Content="تم التحديث في" HorizontalAlignment="Left" Margin="317,22,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="timeLabel" Content="" HorizontalAlignment="Left" Margin="202,22,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="label" Content="تم التحديث في" HorizontalAlignment="Left" Margin="207,22,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="timeLabel" Content="" HorizontalAlignment="Left" Margin="93,22,0,0" VerticalAlignment="Top" Width="94"/>
         <Button x:Name="button" Content="التفاصيل" HorizontalAlignment="Left" Margin="165,200,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
 
     </Grid>

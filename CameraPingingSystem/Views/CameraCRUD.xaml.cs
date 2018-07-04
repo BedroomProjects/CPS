@@ -12,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.Entity;
+
 
 namespace CameraPingingSystem.Views
 {
@@ -42,7 +44,7 @@ namespace CameraPingingSystem.Views
             this.RoadComboBox.ItemsSource = cpsEntities.roads.Where(i => i.ID == _roadNumber).Select(i => i.NAME).ToList();
             //this.RoadComboBox.IsEnabled = false;
 
-            var _cameras = cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => new { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.ROAD, SECTOR = i.SECTOR, GATE = i.GATE, BOOTH = i.BOOTH, LANE = i.LANE }).ToList();
+            var _cameras = cpsEntities.cameras.Include(o => o.sector1).Include(g => g.road1).Include(m => m.lane1).Include(z => z.booth1).Where(i => i.ROAD == _roadNumber).Select(i => new CameraWrapper { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.road1.NAME, SECTOR =  i.sector1.NAME, GATE = i.gate1.NAME, BOOTH = i.booth1.NAME, LANE = i.lane1.NAME  }).ToList();
             dataGridView.ItemsSource = _cameras;
         }
 
@@ -64,42 +66,51 @@ namespace CameraPingingSystem.Views
                 cpsEntities.cameras.Add(cameraObj);
                 cpsEntities.SaveChanges();
                 updateGridView();
+                this.hiddenLabel.Content = "";
+                this.ipAddressTextBox.Text = "";
+                this.LaneComboBox.Text = "";
+                this.BoothComboBox.Text = "";
+                this.GateComboBox.Text = "";
+                this.SectorComboBox.Text = "";
+                this.RoadComboBox.Text = "";
             }
         }
 
         private void updateGridView()
         {
-            var _cameras = cpsEntities.cameras.Where(i => i.ROAD == _roadNumber).Select(i => new { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.ROAD, SECTOR = i.SECTOR, GATE = i.GATE, BOOTH = i.BOOTH, LANE = i.LANE }).ToList();
+            var _cameras = cpsEntities.cameras.Include(o => o.sector1).Include(g => g.road1).Include(m => m.lane1).Include(z => z.booth1).Where(i => i.ROAD == _roadNumber).Select(i => new CameraWrapper { ID = i.ID, IP_ADDRESS = i.IP_ADDRESS, ROAD = i.road1.NAME, SECTOR = i.sector1.NAME, GATE = i.gate1.NAME, BOOTH = i.booth1.NAME, LANE = i.lane1.NAME }).ToList();
             dataGridView.ItemsSource = _cameras;
         }
 
         private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
         {
+
+            saveButton.IsEnabled = false;
             // DataGridRow row = ItemsControl.ContainerFromElement((DataGrid)sender, e.OriginalSource as DependencyObject) as DataGridRow;
 
             object item = dataGridView.SelectedItem;
             string ID = (dataGridView.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
             string IPADDRESS = (dataGridView.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
-            int ROAD = int.Parse((dataGridView.SelectedCells[2].Column.GetCellContent(item) as TextBlock).Text);
-            int SECTOR = int.Parse((dataGridView.SelectedCells[3].Column.GetCellContent(item) as TextBlock).Text);
-            int GATE = int.Parse((dataGridView.SelectedCells[4].Column.GetCellContent(item) as TextBlock).Text);
-            int BOOTH = int.Parse((dataGridView.SelectedCells[5].Column.GetCellContent(item) as TextBlock).Text);
-            int LANE = int.Parse((dataGridView.SelectedCells[6].Column.GetCellContent(item) as TextBlock).Text);
+            string GATE = (dataGridView.SelectedCells[2].Column.GetCellContent(item) as TextBlock).Text;
+            string LANE = (dataGridView.SelectedCells[3].Column.GetCellContent(item) as TextBlock).Text;
+            string BOOTH = (dataGridView.SelectedCells[4].Column.GetCellContent(item) as TextBlock).Text;
+            string SECTOR = (dataGridView.SelectedCells[5].Column.GetCellContent(item) as TextBlock).Text;
+            string ROAD = (dataGridView.SelectedCells[6].Column.GetCellContent(item) as TextBlock).Text;
 
-            string _laneValue = cpsEntities.lanes.Where(i => i.ID == LANE).FirstOrDefault().NAME;
-            string _boothValue = cpsEntities.booths.Where(i => i.ID == BOOTH).FirstOrDefault().NAME;
-            string _gateValue = cpsEntities.gates.Where(i => i.ID == GATE).FirstOrDefault().NAME;
-            string _sectorValue = cpsEntities.sectors.Where(i => i.ID == SECTOR).FirstOrDefault().NAME;
-            string _roadValue = cpsEntities.roads.Where(i => i.ID == ROAD).FirstOrDefault().NAME;
+            //string _laneValue = cpsEntities.lanes.Where(i => i.ID == LANE).FirstOrDefault().NAME;
+            //string _boothValue = cpsEntities.booths.Where(i => i.ID == BOOTH).FirstOrDefault().NAME;
+            //string _gateValue = cpsEntities.gates.Where(i => i.ID == GATE).FirstOrDefault().NAME;
+            //string _sectorValue = cpsEntities.sectors.Where(i => i.ID == SECTOR).FirstOrDefault().NAME;
+            //string _roadValue = cpsEntities.roads.Where(i => i.ID == ROAD).FirstOrDefault().NAME;
 
 
             this.hiddenLabel.Content = ID;
             this.ipAddressTextBox.Text = IPADDRESS;
-            this.LaneComboBox.Text = _laneValue;
-            this.BoothComboBox.Text = _boothValue;
-            this.GateComboBox.Text = _gateValue;
-            this.SectorComboBox.Text = _sectorValue;
-            this.RoadComboBox.Text = _roadValue;
+            this.LaneComboBox.Text = LANE;
+            this.BoothComboBox.Text = BOOTH;
+            this.GateComboBox.Text = GATE;
+            this.SectorComboBox.Text = SECTOR;
+            this.RoadComboBox.Text = ROAD;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -147,7 +158,12 @@ namespace CameraPingingSystem.Views
                 this.GateComboBox.Text = "";
                 this.SectorComboBox.Text = "";
                 this.RoadComboBox.Text = "";
+
+                saveButton.IsEnabled = true;
             }
         }
+
+      
+
     }
 }
