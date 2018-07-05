@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="LoginFormWindow" Height="420.896" Width="450.746" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanMinimize">
     <Grid>
-        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Height="39" Margin="39,153,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="221"/>
-        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Height="40" Margin="39,222,0,0"  VerticalAlignment="Top" Width="221"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Height="39" Margin="39,153,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="221" FontSize="20"/>
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Height="40" Margin="39,222,0,0"  VerticalAlignment="Top" Width="221" FontSize="20"/>
         <Label Content="اسم المستخدم" HorizontalAlignment="Left" Margin="282,153,0,0" VerticalAlignment="Top" Height="46" Width="131" FontSize="20"/>
         <Label Content="كلمة السر" HorizontalAlignment="Left" Margin="301,218,0,0" VerticalAlignment="Top" Height="44" Width="92" FontSize="20"/>
         <Image HorizontalAlignment="Left" Height="125" Margin="155,10,0,0" VerticalAlignment="Top" Width="127" Source="/Resources/logo.png"/>

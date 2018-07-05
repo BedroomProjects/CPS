@@ -109,6 +109,9 @@
     <Compile Include="Views\CameraDashboardDetailed.xaml.cs">
       <DependentUpon>CameraDashboardDetailed.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\GlobalAdminEntryPage.xaml.cs">
+      <DependentUpon>GlobalAdminEntryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LocalAdminEntryPage.xaml.cs">
       <DependentUpon>LocalAdminEntryPage.xaml</DependentUpon>
     </Compile>
@@ -136,6 +139,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CameraDashboardDetailed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GlobalAdminEntryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

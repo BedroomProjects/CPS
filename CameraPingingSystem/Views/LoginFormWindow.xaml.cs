@@ -56,9 +56,13 @@ namespace CameraPingingSystem.Views
             {
                 if (user.ADMIN_PRIVILEGE == 1) { // Road\Local Admin
                     this.Close(); // Close the current window
-
                     LocalAdminEntryPage _localAdminEntryPage = new LocalAdminEntryPage(user.ROAD);
                     _localAdminEntryPage.Show();
+                }
+                if (user.ADMIN_PRIVILEGE == 2) {
+                    this.Close();
+                    GlobalAdminEntryPage _globalAdminEntryPage = new GlobalAdminEntryPage();
+                    _globalAdminEntryPage.Show();
                 }
             }
         }
